@@ -97,6 +97,7 @@
 		095341A11F16919400297D2C /* YSWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				095341D01F16944100297D2C /* Classes */,
 				095341A21F16919400297D2C /* AppDelegate.swift */,
 				095341A41F16919400297D2C /* ViewController.swift */,
 				095341A61F16919400297D2C /* Main.storyboard */,
@@ -123,6 +124,53 @@
 				095341C41F16919400297D2C /* Info.plist */,
 			);
 			path = YSWeiboUITests;
+			sourceTree = "<group>";
+		};
+		095341D01F16944100297D2C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				095341D11F16944100297D2C /* Discover */,
+				095341D21F16944100297D2C /* Home */,
+				095341D31F16944100297D2C /* Main */,
+				095341D41F16944100297D2C /* Message */,
+				095341D51F16944100297D2C /* Profile */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		095341D11F16944100297D2C /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		095341D21F16944100297D2C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		095341D31F16944100297D2C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		095341D41F16944100297D2C /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		095341D51F16944100297D2C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
