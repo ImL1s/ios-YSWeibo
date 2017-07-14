@@ -20,6 +20,10 @@
 		095341DD1F169A0E00297D2C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341DC1F169A0E00297D2C /* MessageViewController.swift */; };
 		095341DF1F169A1C00297D2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341DE1F169A1C00297D2C /* ProfileViewController.swift */; };
 		095341E11F17496100297D2C /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 095341E01F17496100297D2C /* MainVCSettings.json */; };
+		0978FCFA1F189C7700DDF284 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FCF81F189C7700DDF284 /* Home.storyboard */; };
+		0978FCFD1F189C9D00DDF284 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FCFB1F189C9D00DDF284 /* Message.storyboard */; };
+		0978FD001F189CB400DDF284 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FCFE1F189CB400DDF284 /* Discover.storyboard */; };
+		0978FD031F189CCB00DDF284 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FD011F189CCB00DDF284 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		095341DC1F169A0E00297D2C /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		095341DE1F169A1C00297D2C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		095341E01F17496100297D2C /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		0978FCF91F189C7700DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		0978FCFC1F189C9D00DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Message.storyboard; sourceTree = "<group>"; };
+		0978FCFF1F189CB400DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
+		0978FD021F189CCB00DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,10 @@
 				095341A21F16919400297D2C /* AppDelegate.swift */,
 				095341A41F16919400297D2C /* ViewController.swift */,
 				095341A61F16919400297D2C /* Main.storyboard */,
+				0978FD011F189CCB00DDF284 /* Profile.storyboard */,
+				0978FCFE1F189CB400DDF284 /* Discover.storyboard */,
+				0978FCFB1F189C9D00DDF284 /* Message.storyboard */,
+				0978FCF81F189C7700DDF284 /* Home.storyboard */,
 				095341A91F16919400297D2C /* Assets.xcassets */,
 				095341AB1F16919400297D2C /* LaunchScreen.storyboard */,
 				095341AE1F16919400297D2C /* Info.plist */,
@@ -302,8 +314,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				095341AD1F16919400297D2C /* LaunchScreen.storyboard in Resources */,
+				0978FCFA1F189C7700DDF284 /* Home.storyboard in Resources */,
+				0978FD031F189CCB00DDF284 /* Profile.storyboard in Resources */,
 				095341AA1F16919400297D2C /* Assets.xcassets in Resources */,
 				095341E11F17496100297D2C /* MainVCSettings.json in Resources */,
+				0978FCFD1F189C9D00DDF284 /* Message.storyboard in Resources */,
+				0978FD001F189CB400DDF284 /* Discover.storyboard in Resources */,
 				095341A81F16919400297D2C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +401,38 @@
 				095341AC1F16919400297D2C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0978FCF81F189C7700DDF284 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0978FCF91F189C7700DDF284 /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
+		0978FCFB1F189C9D00DDF284 /* Message.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0978FCFC1F189C9D00DDF284 /* Base */,
+			);
+			name = Message.storyboard;
+			sourceTree = "<group>";
+		};
+		0978FCFE1F189CB400DDF284 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0978FCFF1F189CB400DDF284 /* Base */,
+			);
+			name = Discover.storyboard;
+			sourceTree = "<group>";
+		};
+		0978FD011F189CCB00DDF284 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0978FD021F189CCB00DDF284 /* Base */,
+			);
+			name = Profile.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

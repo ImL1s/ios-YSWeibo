@@ -16,12 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // init root vc
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MainViewController()
-        window?.makeKeyAndVisible()
-        
-        // init tab bar
+//        // init root vc
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.rootViewController = MainViewController()
+//        window?.makeKeyAndVisible()
+//        
+//        // init tab bar
         UITabBar.appearance().tintColor = UIColor.orange
         
         return true
