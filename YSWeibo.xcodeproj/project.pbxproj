@@ -17,8 +17,9 @@
 		095341D71F16966F00297D2C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341D61F16966F00297D2C /* MainViewController.swift */; };
 		095341D91F16976B00297D2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341D81F16976B00297D2C /* HomeViewController.swift */; };
 		095341DB1F1699FE00297D2C /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341DA1F1699FE00297D2C /* DiscoverViewController.swift */; };
-		095341DD1F169A0E00297D2C /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341DC1F169A0E00297D2C /* MessageController.swift */; };
+		095341DD1F169A0E00297D2C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341DC1F169A0E00297D2C /* MessageViewController.swift */; };
 		095341DF1F169A1C00297D2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341DE1F169A1C00297D2C /* ProfileViewController.swift */; };
+		095341E11F17496100297D2C /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 095341E01F17496100297D2C /* MainVCSettings.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +56,9 @@
 		095341D61F16966F00297D2C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		095341D81F16976B00297D2C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		095341DA1F1699FE00297D2C /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
-		095341DC1F169A0E00297D2C /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		095341DC1F169A0E00297D2C /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		095341DE1F169A1C00297D2C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		095341E01F17496100297D2C /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				095341A91F16919400297D2C /* Assets.xcassets */,
 				095341AB1F16919400297D2C /* LaunchScreen.storyboard */,
 				095341AE1F16919400297D2C /* Info.plist */,
+				095341E01F17496100297D2C /* MainVCSettings.json */,
 			);
 			path = YSWeibo;
 			sourceTree = "<group>";
@@ -175,7 +178,7 @@
 		095341D41F16944100297D2C /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				095341DC1F169A0E00297D2C /* MessageController.swift */,
+				095341DC1F169A0E00297D2C /* MessageViewController.swift */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			files = (
 				095341AD1F16919400297D2C /* LaunchScreen.storyboard in Resources */,
 				095341AA1F16919400297D2C /* Assets.xcassets in Resources */,
+				095341E11F17496100297D2C /* MainVCSettings.json in Resources */,
 				095341A81F16919400297D2C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,7 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				095341D71F16966F00297D2C /* MainViewController.swift in Sources */,
-				095341DD1F169A0E00297D2C /* MessageController.swift in Sources */,
+				095341DD1F169A0E00297D2C /* MessageViewController.swift in Sources */,
 				095341A51F16919400297D2C /* ViewController.swift in Sources */,
 				095341A31F16919400297D2C /* AppDelegate.swift in Sources */,
 				095341DF1F169A1C00297D2C /* ProfileViewController.swift in Sources */,
@@ -584,6 +588,7 @@
 				095341C91F16919400297D2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		095341CA1F16919400297D2C /* Build configuration list for PBXNativeTarget "YSWeiboTests" */ = {
 			isa = XCConfigurationList;
@@ -592,6 +597,7 @@
 				095341CC1F16919400297D2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		095341CD1F16919400297D2C /* Build configuration list for PBXNativeTarget "YSWeiboUITests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +606,7 @@
 				095341CF1F16919400297D2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
