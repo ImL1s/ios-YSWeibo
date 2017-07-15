@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Profile-->
         <scene sceneID="B7T-Zj-bTw">
             <objects>
                 <tableViewController id="SNR-GM-2XN" customClass="ProfileViewController" customModule="YSWeibo" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             <outlet property="delegate" destination="SNR-GM-2XN" id="bcH-da-vJa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="jQO-Bm-jxK"/>
+                    <navigationItem key="navigationItem" title="Profile" id="jQO-Bm-jxK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0me-xH-Gud" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Discover-->
         <scene sceneID="C9R-E8-RjN">
             <objects>
                 <tableViewController id="BSU-En-9OO" customClass="DiscoverViewController" customModule="YSWeibo" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                             <outlet property="delegate" destination="BSU-En-9OO" id="H1l-2l-ael"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="gHo-5g-Ztm"/>
+                    <navigationItem key="navigationItem" title="Discover" id="gHo-5g-Ztm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n0s-2k-xTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
