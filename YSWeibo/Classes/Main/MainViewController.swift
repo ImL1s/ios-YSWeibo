@@ -30,13 +30,8 @@ class MainViewController: UITabBarController {
     
     func initComposeButton() {
         tabBar.addSubview(composeButton)
-//        composeButton.setBackgroundImage(UIImage(named: "tabbar_compose_button"), for: .normal)
-//        composeButton.setBackgroundImage(UIImage(named: "tabbar_compose_button_highlighted"), for: .highlighted)
-//        composeButton.setImage(UIImage(named: "tabbar_compose_icon_add"), for: .normal)
-//        composeButton.setImage(UIImage(named: "tabbar_compose_icon_add_highlighted"), for: .highlighted)
-//        composeButton.sizeToFit()
-        
         composeButton.center = CGPoint(x: tabBar.center.x, y: tabBar.bounds.height * 0.5)
+        composeButton.addTarget(self, action: #selector(composeBtnClick), for: .touchUpInside)
         
     }
     
@@ -44,5 +39,16 @@ class MainViewController: UITabBarController {
         let item = tabBar.items?[2]
         item?.isEnabled = false
     }
+}
+
+extension MainViewController{
     
+    func composeBtnClick(){
+        print("onClick")
+    }
+    
+    // 使用 @objc 讓此方法加入到方法列表中
+//    @objc private func composeBtnClick(){
+//        print("onClick")
+//    }
 }
