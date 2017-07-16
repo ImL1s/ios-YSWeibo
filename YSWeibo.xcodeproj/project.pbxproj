@@ -25,6 +25,9 @@
 		0978FD001F189CB400DDF284 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FCFE1F189CB400DDF284 /* Discover.storyboard */; };
 		0978FD031F189CCB00DDF284 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FD011F189CCB00DDF284 /* Profile.storyboard */; };
 		0978FD071F1A0CA700DDF284 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978FD061F1A0CA700DDF284 /* UIButton-Extension.swift */; };
+		0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978FD091F1B45EF00DDF284 /* VisitorView.swift */; };
+		09DF6D0E1F1B466A0042A30E /* VistorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DF6D0D1F1B466A0042A30E /* VistorView.xib */; };
+		09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF6D111F1B48890042A30E /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		0978FCFF1F189CB400DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		0978FD021F189CCB00DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		0978FD061F1A0CA700DDF284 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		0978FD091F1B45EF00DDF284 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		09DF6D0D1F1B466A0042A30E /* VistorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VistorView.xib; sourceTree = "<group>"; };
+		09DF6D111F1B48890042A30E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,7 @@
 		095341D01F16944100297D2C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				09DF6D0F1F1B48520042A30E /* Base */,
 				095341D31F16944100297D2C /* Main */,
 				095341D21F16944100297D2C /* Home */,
 				095341D41F16944100297D2C /* Message */,
@@ -183,6 +190,7 @@
 		095341D31F16944100297D2C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0978FD081F1B45C500DDF284 /* Visitor */,
 				095341D61F16966F00297D2C /* MainViewController.swift */,
 			);
 			path = Main;
@@ -220,6 +228,31 @@
 				0978FD061F1A0CA700DDF284 /* UIButton-Extension.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		0978FD081F1B45C500DDF284 /* Visitor */ = {
+			isa = PBXGroup;
+			children = (
+				0978FD091F1B45EF00DDF284 /* VisitorView.swift */,
+				09DF6D0D1F1B466A0042A30E /* VistorView.xib */,
+			);
+			path = Visitor;
+			sourceTree = "<group>";
+		};
+		09DF6D0F1F1B48520042A30E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				09DF6D101F1B48660042A30E /* ViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		09DF6D101F1B48660042A30E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09DF6D111F1B48890042A30E /* BaseViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +369,7 @@
 				0978FCFA1F189C7700DDF284 /* Home.storyboard in Resources */,
 				0978FD031F189CCB00DDF284 /* Profile.storyboard in Resources */,
 				095341AA1F16919400297D2C /* Assets.xcassets in Resources */,
+				09DF6D0E1F1B466A0042A30E /* VistorView.xib in Resources */,
 				095341E11F17496100297D2C /* MainVCSettings.json in Resources */,
 				0978FCFD1F189C9D00DDF284 /* Message.storyboard in Resources */,
 				0978FD001F189CB400DDF284 /* Discover.storyboard in Resources */,
@@ -369,7 +403,9 @@
 				095341A51F16919400297D2C /* ViewController.swift in Sources */,
 				095341A31F16919400297D2C /* AppDelegate.swift in Sources */,
 				095341DF1F169A1C00297D2C /* ProfileViewController.swift in Sources */,
+				09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */,
 				095341D91F16976B00297D2C /* HomeViewController.swift in Sources */,
+				0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */,
 				095341DB1F1699FE00297D2C /* DiscoverViewController.swift in Sources */,
 				0978FD071F1A0CA700DDF284 /* UIButton-Extension.swift in Sources */,
 			);
