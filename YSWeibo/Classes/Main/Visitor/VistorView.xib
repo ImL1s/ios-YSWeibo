@@ -14,8 +14,81 @@
         <view contentMode="scaleToFill" id="1q2-Xr-91f" customClass="VisitorView" customModule="YSWeibo" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="-134" y="-95"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="2a6-Mb-ab4" userLabel="turntable">
+                    <rect key="frame" x="100" y="166" width="175" height="175"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="175" id="SOh-uj-Fxa"/>
+                        <constraint firstAttribute="width" constant="175" id="kNC-qC-4ka"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_mask_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="8V3-El-U0r" userLabel="mask">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="440"/>
+                    <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="440" id="00Z-ey-5L3"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_house" translatesAutoresizingMaskIntoConstraints="NO" id="gJo-oa-3N1" userLabel="homeIcon">
+                    <rect key="frame" x="140" y="229" width="94" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="5PY-4u-260"/>
+                        <constraint firstAttribute="width" constant="94" id="VzU-06-ZlS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="關注一下人，回這裡看看有什麼驚喜" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f73-L9-hiH" userLabel="tip">
+                    <rect key="frame" x="67" y="401" width="240" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="rWv-pf-JsI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weH-3v-DIB">
+                    <rect key="frame" x="67" y="469" width="90" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="7IE-Sn-Wbw"/>
+                        <constraint firstAttribute="height" constant="32" id="usi-8M-JEs"/>
+                    </constraints>
+                    <state key="normal" title="註冊" backgroundImage="common_button_white_disable">
+                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XR-wj-xUv">
+                    <rect key="frame" x="217" y="469" width="90" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="IIi-4V-2mB"/>
+                        <constraint firstAttribute="width" constant="90" id="UK0-7e-DmB"/>
+                    </constraints>
+                    <state key="normal" title="登入" backgroundImage="common_button_white_disable">
+                        <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.92943000793457031" green="0.92940998077392578" blue="0.92941391468048096" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="2a6-Mb-ab4" firstAttribute="centerY" secondItem="1q2-Xr-91f" secondAttribute="centerY" constant="-80" id="24k-Gr-8CZ"/>
+                <constraint firstItem="weH-3v-DIB" firstAttribute="top" secondItem="gJo-oa-3N1" secondAttribute="bottom" constant="150" id="37J-dW-4Wv"/>
+                <constraint firstAttribute="trailing" secondItem="8V3-El-U0r" secondAttribute="trailing" id="5oM-tX-RaZ"/>
+                <constraint firstItem="f73-L9-hiH" firstAttribute="top" secondItem="2a6-Mb-ab4" secondAttribute="bottom" constant="60" id="B2D-Cp-Vuu"/>
+                <constraint firstItem="8V3-El-U0r" firstAttribute="leading" secondItem="1q2-Xr-91f" secondAttribute="leading" id="F54-JC-ZnR"/>
+                <constraint firstItem="gJo-oa-3N1" firstAttribute="centerX" secondItem="2a6-Mb-ab4" secondAttribute="centerX" id="HmQ-Fk-Aez"/>
+                <constraint firstItem="7XR-wj-xUv" firstAttribute="top" secondItem="gJo-oa-3N1" secondAttribute="bottom" constant="150" id="JYf-Ho-vbH"/>
+                <constraint firstItem="2a6-Mb-ab4" firstAttribute="centerX" secondItem="1q2-Xr-91f" secondAttribute="centerX" id="LIN-sK-z0J"/>
+                <constraint firstItem="f73-L9-hiH" firstAttribute="centerX" secondItem="gJo-oa-3N1" secondAttribute="centerX" id="pqA-zS-jn1"/>
+                <constraint firstItem="weH-3v-DIB" firstAttribute="leading" secondItem="f73-L9-hiH" secondAttribute="leading" id="qji-qf-3Op"/>
+                <constraint firstItem="8V3-El-U0r" firstAttribute="top" secondItem="1q2-Xr-91f" secondAttribute="top" id="s8Q-Gc-O4J"/>
+                <constraint firstItem="7XR-wj-xUv" firstAttribute="trailing" secondItem="f73-L9-hiH" secondAttribute="trailing" id="sHy-KA-dfG"/>
+                <constraint firstItem="gJo-oa-3N1" firstAttribute="centerY" secondItem="2a6-Mb-ab4" secondAttribute="centerY" constant="20" id="sKf-m2-CPF"/>
+            </constraints>
+            <point key="canvasLocation" x="-134.5" y="-95.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="common_button_white_disable" width="11" height="9"/>
+        <image name="visitordiscover_feed_image_house" width="94" height="90"/>
+        <image name="visitordiscover_feed_image_smallicon" width="175" height="175"/>
+        <image name="visitordiscover_feed_mask_smallicon" width="175" height="175"/>
+    </resources>
 </document>
