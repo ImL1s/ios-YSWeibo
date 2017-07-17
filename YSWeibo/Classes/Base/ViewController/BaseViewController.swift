@@ -11,7 +11,7 @@ import UIKit
 class BaseViewController: UITableViewController {
     
     lazy var vistorView = VisitorView.visitorView()
-    var isLogin = false
+    var isLogin = true
     
     override func viewDidLoad() {
         super.viewDidLoad()

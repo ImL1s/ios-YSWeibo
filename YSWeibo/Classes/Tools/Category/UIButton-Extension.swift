@@ -12,7 +12,7 @@ extension UIButton {
     
     convenience init(normal imageNormal: String, selected imageSelected: String, NormalBg imageNormalBg: String, normalBgSelected imageSelectedBg: String){
         self.init()
-     
+        
         self.setBackgroundImage(UIImage(named: imageNormal), for: .normal)
         self.setBackgroundImage(UIImage(named: imageSelected), for: .highlighted)
         self.setImage(UIImage(named: imageNormalBg), for: .normal)

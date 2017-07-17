@@ -20,11 +20,12 @@
 		095341DD1F169A0E00297D2C /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341DC1F169A0E00297D2C /* MessageViewController.swift */; };
 		095341DF1F169A1C00297D2C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341DE1F169A1C00297D2C /* ProfileViewController.swift */; };
 		095341E11F17496100297D2C /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = 095341E01F17496100297D2C /* MainVCSettings.json */; };
+		096DE8B51F1C7550002973E4 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096DE8B41F1C7550002973E4 /* UIButton-Extension.swift */; };
+		096DE8B71F1C75B1002973E4 /* UIButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096DE8B61F1C75B1002973E4 /* UIButtonItem-Extension.swift */; };
 		0978FCFA1F189C7700DDF284 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FCF81F189C7700DDF284 /* Home.storyboard */; };
 		0978FCFD1F189C9D00DDF284 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FCFB1F189C9D00DDF284 /* Message.storyboard */; };
 		0978FD001F189CB400DDF284 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FCFE1F189CB400DDF284 /* Discover.storyboard */; };
 		0978FD031F189CCB00DDF284 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FD011F189CCB00DDF284 /* Profile.storyboard */; };
-		0978FD071F1A0CA700DDF284 /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978FD061F1A0CA700DDF284 /* UIButton-Extension.swift */; };
 		0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978FD091F1B45EF00DDF284 /* VisitorView.swift */; };
 		09DF6D0E1F1B466A0042A30E /* VistorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DF6D0D1F1B466A0042A30E /* VistorView.xib */; };
 		09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF6D111F1B48890042A30E /* BaseViewController.swift */; };
@@ -67,11 +68,12 @@
 		095341DC1F169A0E00297D2C /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		095341DE1F169A1C00297D2C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		095341E01F17496100297D2C /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		096DE8B41F1C7550002973E4 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
+		096DE8B61F1C75B1002973E4 /* UIButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		0978FCF91F189C7700DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		0978FCFC1F189C9D00DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Message.storyboard; sourceTree = "<group>"; };
 		0978FCFF1F189CB400DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		0978FD021F189CCB00DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
-		0978FD061F1A0CA700DDF284 /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		0978FD091F1B45EF00DDF284 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		09DF6D0D1F1B466A0042A30E /* VistorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VistorView.xib; sourceTree = "<group>"; };
 		09DF6D111F1B48890042A30E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -225,7 +227,8 @@
 		0978FD051F1A0C5F00DDF284 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				0978FD061F1A0CA700DDF284 /* UIButton-Extension.swift */,
+				096DE8B41F1C7550002973E4 /* UIButton-Extension.swift */,
+				096DE8B61F1C75B1002973E4 /* UIButtonItem-Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -401,13 +404,14 @@
 				095341D71F16966F00297D2C /* MainViewController.swift in Sources */,
 				095341DD1F169A0E00297D2C /* MessageViewController.swift in Sources */,
 				095341A51F16919400297D2C /* ViewController.swift in Sources */,
+				096DE8B51F1C7550002973E4 /* UIButton-Extension.swift in Sources */,
 				095341A31F16919400297D2C /* AppDelegate.swift in Sources */,
+				096DE8B71F1C75B1002973E4 /* UIButtonItem-Extension.swift in Sources */,
 				095341DF1F169A1C00297D2C /* ProfileViewController.swift in Sources */,
 				09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */,
 				095341D91F16976B00297D2C /* HomeViewController.swift in Sources */,
 				0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */,
 				095341DB1F1699FE00297D2C /* DiscoverViewController.swift in Sources */,
-				0978FD071F1A0CA700DDF284 /* UIButton-Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
