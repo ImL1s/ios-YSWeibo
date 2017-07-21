@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0942938E1F21C087008F3515 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0942938C1F21C087008F3515 /* PopupViewController.swift */; };
+		0942938F1F21C087008F3515 /* PopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0942938D1F21C087008F3515 /* PopupViewController.xib */; };
+		094293911F22076B008F3515 /* UIHomePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094293901F22076B008F3515 /* UIHomePresentationController.swift */; };
+		094293931F222290008F3515 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094293921F222290008F3515 /* TitleButton.swift */; };
 		095341A31F16919400297D2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341A21F16919400297D2C /* AppDelegate.swift */; };
 		095341A51F16919400297D2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095341A41F16919400297D2C /* ViewController.swift */; };
 		095341A81F16919400297D2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 095341A61F16919400297D2C /* Main.storyboard */; };
@@ -49,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0942938C1F21C087008F3515 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		0942938D1F21C087008F3515 /* PopupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopupViewController.xib; sourceTree = "<group>"; };
+		094293901F22076B008F3515 /* UIHomePresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHomePresentationController.swift; sourceTree = "<group>"; };
+		094293921F222290008F3515 /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		0953419F1F16919400297D2C /* YSWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		095341A21F16919400297D2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		095341A41F16919400297D2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +112,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0942938B1F21C054008F3515 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				0942938C1F21C087008F3515 /* PopupViewController.swift */,
+				0942938D1F21C087008F3515 /* PopupViewController.xib */,
+				094293901F22076B008F3515 /* UIHomePresentationController.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		095341961F16919300297D2C = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +201,7 @@
 		095341D21F16944100297D2C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0942938B1F21C054008F3515 /* Popup */,
 				0978FCF81F189C7700DDF284 /* Home.storyboard */,
 				095341D81F16976B00297D2C /* HomeViewController.swift */,
 			);
@@ -229,6 +248,7 @@
 			children = (
 				096DE8B41F1C7550002973E4 /* UIButton-Extension.swift */,
 				096DE8B61F1C75B1002973E4 /* UIButtonItem-Extension.swift */,
+				094293921F222290008F3515 /* TitleButton.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -375,6 +395,7 @@
 				09DF6D0E1F1B466A0042A30E /* VistorView.xib in Resources */,
 				095341E11F17496100297D2C /* MainVCSettings.json in Resources */,
 				0978FCFD1F189C9D00DDF284 /* Message.storyboard in Resources */,
+				0942938F1F21C087008F3515 /* PopupViewController.xib in Resources */,
 				0978FD001F189CB400DDF284 /* Discover.storyboard in Resources */,
 				095341A81F16919400297D2C /* Main.storyboard in Resources */,
 			);
@@ -401,17 +422,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094293931F222290008F3515 /* TitleButton.swift in Sources */,
 				095341D71F16966F00297D2C /* MainViewController.swift in Sources */,
 				095341DD1F169A0E00297D2C /* MessageViewController.swift in Sources */,
 				095341A51F16919400297D2C /* ViewController.swift in Sources */,
 				096DE8B51F1C7550002973E4 /* UIButton-Extension.swift in Sources */,
 				095341A31F16919400297D2C /* AppDelegate.swift in Sources */,
 				096DE8B71F1C75B1002973E4 /* UIButtonItem-Extension.swift in Sources */,
+				094293911F22076B008F3515 /* UIHomePresentationController.swift in Sources */,
 				095341DF1F169A1C00297D2C /* ProfileViewController.swift in Sources */,
 				09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */,
 				095341D91F16976B00297D2C /* HomeViewController.swift in Sources */,
 				0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */,
 				095341DB1F1699FE00297D2C /* DiscoverViewController.swift in Sources */,
+				0942938E1F21C087008F3515 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

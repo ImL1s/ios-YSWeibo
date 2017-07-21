@@ -8,30 +8,28 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
-
+class HomeViewController: BaseViewController, UIViewControllerTransitioningDelegate {
+    
+    lazy var titleBtn: TitleButton = TitleButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initNavigatorBar()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        vistorView.lanchAnimation()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
@@ -43,6 +41,37 @@ extension HomeViewController{
     
     func initNavigatorBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "tabbar_profile")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "tabbar_compose_icon_add_highlighted")
+        
+        titleBtn.setTitle("Home", for: .normal)
+        titleBtn.addTarget(self, action: #selector(titleBtnClick(btn:)), for: .touchUpInside)
+        titleBtn.setTitleColor(UIColor.black, for: .normal)
+        navigationItem.titleView = titleBtn
     }
+    
+}
+
+
+extension HomeViewController{
+    func titleBtnClick(btn: UIButton) {
+        titleBtn.isSelected = true
+        let vc = PopupViewController()
+        
+        vc.transitioningDelegate = self
+        
+        vc.modalPresentationStyle = .custom
+        
+        present(vc, animated: true) {
+            
+        }
+    }
+}
+
+extension HomeViewController{
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return UIHomePresentationController(presentedViewController: presented, presenting: presenting)
+    }
+//    presentationControllerForPresentedViewController
+    
     
 }

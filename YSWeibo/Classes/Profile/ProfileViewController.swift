@@ -12,7 +12,7 @@ class ProfileViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        vistorView.setUp(iconName: "visitordiscover_image_profile", tip: "趕快登入!")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

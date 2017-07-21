@@ -12,7 +12,7 @@ class MessageViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        vistorView.setUp(iconName: "visitordiscover_image_message", tip: "趕快登入,發些消息吧!")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

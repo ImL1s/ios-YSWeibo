@@ -12,7 +12,7 @@ class DiscoverViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        vistorView.setUp(iconName: "visitordiscover_image_message", tip: "趕快登入,發現新東西吧!")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
