@@ -33,6 +33,7 @@
 		0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978FD091F1B45EF00DDF284 /* VisitorView.swift */; };
 		09DF6D0E1F1B466A0042A30E /* VistorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DF6D0D1F1B466A0042A30E /* VistorView.xib */; };
 		09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF6D111F1B48890042A30E /* BaseViewController.swift */; };
+		94CF8C541F29AB7800262B1C /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF8C531F29AB7800262B1C /* PopoverAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		0978FD091F1B45EF00DDF284 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		09DF6D0D1F1B466A0042A30E /* VistorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VistorView.xib; sourceTree = "<group>"; };
 		09DF6D111F1B48890042A30E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		94CF8C531F29AB7800262B1C /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				0942938C1F21C087008F3515 /* PopupViewController.swift */,
 				0942938D1F21C087008F3515 /* PopupViewController.xib */,
 				094293901F22076B008F3515 /* UIHomePresentationController.swift */,
+				94CF8C531F29AB7800262B1C /* PopoverAnimator.swift */,
 			);
 			path = Popup;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				094293911F22076B008F3515 /* UIHomePresentationController.swift in Sources */,
 				095341DF1F169A1C00297D2C /* ProfileViewController.swift in Sources */,
 				09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */,
+				94CF8C541F29AB7800262B1C /* PopoverAnimator.swift in Sources */,
 				095341D91F16976B00297D2C /* HomeViewController.swift in Sources */,
 				0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */,
 				095341DB1F1699FE00297D2C /* DiscoverViewController.swift in Sources */,
