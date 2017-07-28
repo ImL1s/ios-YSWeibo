@@ -11,12 +11,13 @@ import UIKit
 class HomeViewController: BaseViewController {
     
     lazy var titleBtn: TitleButton = TitleButton()
-    lazy var popoverAnimator = PopoverAnimator()
+    var popoverAnimator: PopoverAnimator? = nil
     var popUpController: PopupViewController? = nil
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initAnimator()
         initNavigatorBar()
         vistorView.lanchAnimation()
     }
@@ -43,6 +44,12 @@ class HomeViewController: BaseViewController {
 // MARK: init function
 extension HomeViewController{
     
+    func initAnimator() {
+        popoverAnimator = PopoverAnimator{ (presented) in
+            self.titleBtn.isSelected = presented
+        }
+    }
+    
     func initNavigatorBar() {
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "tabbar_profile")
         navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "tabbar_compose_icon_add_highlighted")
@@ -53,14 +60,6 @@ extension HomeViewController{
         navigationItem.titleView = titleBtn
     }
     
-}
-
-
-// MARK: PopUpParentDelegate
-extension HomeViewController: PopUpParentDelegate{
-    func onDismiss() {
-        titleBtn.isSelected = false
-    }
 }
 
 
@@ -76,8 +75,7 @@ extension HomeViewController{
                 })
             }
             popUpController = PopupViewController()
-            popUpController?.transitioningDelegate = self
-            popUpController?.parentDelegate = self
+            popUpController?.transitioningDelegate = popoverAnimator
             popUpController?.modalPresentationStyle = .custom
             
             present(popUpController!, animated: true) {
@@ -87,24 +85,6 @@ extension HomeViewController{
                 
             })
         }
-    }
-}
-
-
-// MARK: UIViewControllerTransitioningDelegate
-extension HomeViewController: UIViewControllerTransitioningDelegate{
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return UIHomePresentationController(presentedViewController: presented, presenting: presenting)
-    }
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        popoverAnimator.isPresented = true
-        return popoverAnimator
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        popoverAnimator.isPresented = false
-        return popoverAnimator
     }
 }
 

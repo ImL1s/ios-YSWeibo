@@ -9,10 +9,35 @@
 import UIKit
 
 class PopoverAnimator: NSObject {
-
-    var isPresented: Bool = true
-
+    
+    var isPresented: Bool = false
+    var onDismissCallback: ((_ presented: Bool)-> ())?
+    
+    init(dismissCallback: @escaping (_ presented: Bool)-> ()) {
+        self.onDismissCallback = dismissCallback
+    }
+    
 }
+
+
+// MARK: UIViewControllerTransitioningDelegate
+extension PopoverAnimator: UIViewControllerTransitioningDelegate{
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        return UIHomePresentationController(presentedViewController: presented, presenting: presenting)
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        isPresented = true
+        return self
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        isPresented = false
+        return self
+    }
+}
+
+
 
 // MARK: UIViewControllerAnimatedTransitioning
 extension PopoverAnimator: UIViewControllerAnimatedTransitioning{
@@ -27,6 +52,8 @@ extension PopoverAnimator: UIViewControllerAnimatedTransitioning{
     
     func animationForPresentingView(transitionContext: UIViewControllerContextTransitioning){
         
+        isPresented = true
+        onDismissCallback!(isPresented)
         let presentingView = transitionContext.view(forKey: UITransitionContextViewKey.to)
         transitionContext.containerView.addSubview(presentingView!)
         
@@ -41,6 +68,8 @@ extension PopoverAnimator: UIViewControllerAnimatedTransitioning{
     
     func animationForDismissView(transitionContext: UIViewControllerContextTransitioning){
         
+        isPresented = false
+        onDismissCallback!(isPresented)
         let dismissView = transitionContext.view(forKey: UITransitionContextViewKey.from)
         transitionContext.containerView.addSubview(dismissView!)
         

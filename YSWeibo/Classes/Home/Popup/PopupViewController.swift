@@ -9,8 +9,6 @@
 import UIKit
 
 class PopupViewController: UIViewController {
-
-    open var parentDelegate: PopUpParentDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +20,5 @@ class PopupViewController: UIViewController {
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         super.dismiss(animated: flag, completion: completion)
-//        parentDelegate?.onDismiss()
     }
-}
-
-
-protocol PopUpParentDelegate {
-    
-    func onDismiss()
 }

@@ -15,7 +15,6 @@ class UIHomePresentationController: UIPresentationController {
     let height: CGFloat = 250
     
     override func containerViewWillLayoutSubviews() {
-//        containerView?.frame = CGRect(x: 10, y: 10, width: 100, height: 200)
         let x = (self.containerView!.frame.size.width * 0.5) - (width * 0.5);
         presentedView?.frame = CGRect(x: x, y: 60, width: width, height: height)
         
@@ -31,7 +30,6 @@ class UIHomePresentationController: UIPresentationController {
 extension UIHomePresentationController{
     func onConverViewClick() {
         presentedViewController.dismiss(animated: true) { 
-            (self.presentedViewController as! PopupViewController).parentDelegate?.onDismiss()
         }
     }
 }
