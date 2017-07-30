@@ -10,7 +10,9 @@ import UIKit
 
 class PopoverAnimator: NSObject {
     
-    var isPresented: Bool = false
+    public var viewFrame: CGRect = CGRect.zero
+    
+    var isPresented: Bool = true
     var onDismissCallback: ((_ presented: Bool)-> ())?
     
     init(dismissCallback: @escaping (_ presented: Bool)-> ()) {
@@ -19,11 +21,12 @@ class PopoverAnimator: NSObject {
     
 }
 
-
 // MARK: UIViewControllerTransitioningDelegate
 extension PopoverAnimator: UIViewControllerTransitioningDelegate{
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return UIHomePresentationController(presentedViewController: presented, presenting: presenting)
+        let controller = UIHomePresentationController(presentedViewController: presented, presenting: presenting)
+        controller.viewFrame = viewFrame
+        return controller
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {

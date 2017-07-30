@@ -13,6 +13,8 @@ class HomeViewController: BaseViewController {
     lazy var titleBtn: TitleButton = TitleButton()
     var popoverAnimator: PopoverAnimator? = nil
     var popUpController: PopupViewController? = nil
+    let width: CGFloat = 180
+    let height: CGFloat = 250
     
     
     override func viewDidLoad() {
@@ -48,6 +50,10 @@ extension HomeViewController{
         popoverAnimator = PopoverAnimator{ (presented) in
             self.titleBtn.isSelected = presented
         }
+        
+        let x = (self.view!.frame.size.width * 0.5) - (width * 0.5) + 20
+        popoverAnimator?.viewFrame = CGRect(x: x, y: 60, width: width, height: height)
+        
     }
     
     func initNavigatorBar() {

@@ -10,13 +10,12 @@ import UIKit
 
 class UIHomePresentationController: UIPresentationController {
     
+    public var viewFrame: CGRect = CGRect.zero
+    
     let converView = UIView()
-    let width: CGFloat = 180
-    let height: CGFloat = 250
     
     override func containerViewWillLayoutSubviews() {
-        let x = (self.containerView!.frame.size.width * 0.5) - (width * 0.5);
-        presentedView?.frame = CGRect(x: x, y: 60, width: width, height: height)
+        presentedView?.frame = viewFrame
         
         converView.backgroundColor = UIColor(white: 0.0, alpha: 0.2)
         converView.frame = (containerView?.bounds)!
