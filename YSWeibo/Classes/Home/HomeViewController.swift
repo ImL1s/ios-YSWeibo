@@ -53,7 +53,6 @@ extension HomeViewController{
         
         let x = (self.view!.frame.size.width * 0.5) - (width * 0.5) + 20
         popoverAnimator?.viewFrame = CGRect(x: x, y: 60, width: width, height: height)
-        
     }
     
     func initNavigatorBar() {
