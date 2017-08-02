@@ -22,6 +22,9 @@ class HomeViewController: BaseViewController {
         initAnimator()
         initNavigatorBar()
         vistorView.lanchAnimation()
+        var a = NetworkManagerFactory.create()
+        
+//        a?.request(requestType: nil, urlString: nil, parameters: nil, finished: nil)
     }
     
     override func didReceiveMemoryWarning() {

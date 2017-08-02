@@ -32,6 +32,9 @@
 		0978FD001F189CB400DDF284 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FCFE1F189CB400DDF284 /* Discover.storyboard */; };
 		0978FD031F189CCB00DDF284 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FD011F189CCB00DDF284 /* Profile.storyboard */; };
 		0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978FD091F1B45EF00DDF284 /* VisitorView.swift */; };
+		09B60B6E1F30513F00275921 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B6D1F30513F00275921 /* NetworkManager.swift */; };
+		09B60B701F30517B00275921 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B6F1F30517B00275921 /* NetworkManagerProtocol.swift */; };
+		09B60B761F30868D00275921 /* NetworkManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B751F30868D00275921 /* NetworkManagerFactory.swift */; };
 		09DF6D0E1F1B466A0042A30E /* VistorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DF6D0D1F1B466A0042A30E /* VistorView.xib */; };
 		09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF6D111F1B48890042A30E /* BaseViewController.swift */; };
 		2360DB693F0705D0A94EA7EE /* Pods_YSWeiboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32D8BDA243A413D12404D8A /* Pods_YSWeiboTests.framework */; };
@@ -87,6 +90,9 @@
 		0978FCFF1F189CB400DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		0978FD021F189CCB00DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		0978FD091F1B45EF00DDF284 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		09B60B6D1F30513F00275921 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		09B60B6F1F30517B00275921 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		09B60B751F30868D00275921 /* NetworkManagerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerFactory.swift; sourceTree = "<group>"; };
 		09DF6D0D1F1B466A0042A30E /* VistorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VistorView.xib; sourceTree = "<group>"; };
 		09DF6D111F1B48890042A30E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1ED8B841D1596E9E5814A229 /* Pods-YSWeiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSWeiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSWeiboUITests/Pods-YSWeiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 		095341D01F16944100297D2C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				09B60B6C1F3050EC00275921 /* Manager */,
 				09DF6D0F1F1B48520042A30E /* Base */,
 				095341D31F16944100297D2C /* Main */,
 				095341D21F16944100297D2C /* Home */,
@@ -280,6 +287,16 @@
 				09DF6D0D1F1B466A0042A30E /* VistorView.xib */,
 			);
 			path = Visitor;
+			sourceTree = "<group>";
+		};
+		09B60B6C1F3050EC00275921 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				09B60B6D1F30513F00275921 /* NetworkManager.swift */,
+				09B60B6F1F30517B00275921 /* NetworkManagerProtocol.swift */,
+				09B60B751F30868D00275921 /* NetworkManagerFactory.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		09DF6D0F1F1B48520042A30E /* Base */ = {
@@ -615,7 +632,9 @@
 				094293931F222290008F3515 /* TitleButton.swift in Sources */,
 				095341D71F16966F00297D2C /* MainViewController.swift in Sources */,
 				095341DD1F169A0E00297D2C /* MessageViewController.swift in Sources */,
+				09B60B761F30868D00275921 /* NetworkManagerFactory.swift in Sources */,
 				095341A51F16919400297D2C /* ViewController.swift in Sources */,
+				09B60B6E1F30513F00275921 /* NetworkManager.swift in Sources */,
 				096DE8B51F1C7550002973E4 /* UIButton-Extension.swift in Sources */,
 				095341A31F16919400297D2C /* AppDelegate.swift in Sources */,
 				096DE8B71F1C75B1002973E4 /* UIButtonItem-Extension.swift in Sources */,
@@ -623,6 +642,7 @@
 				095341DF1F169A1C00297D2C /* ProfileViewController.swift in Sources */,
 				09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */,
 				94CF8C541F29AB7800262B1C /* PopoverAnimator.swift in Sources */,
+				09B60B701F30517B00275921 /* NetworkManagerProtocol.swift in Sources */,
 				095341D91F16976B00297D2C /* HomeViewController.swift in Sources */,
 				0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */,
 				095341DB1F1699FE00297D2C /* DiscoverViewController.swift in Sources */,
