@@ -84,6 +84,7 @@
             </constraints>
             <connections>
                 <outlet property="iconView" destination="gJo-oa-3N1" id="7Fp-Yy-af0"/>
+                <outlet property="loginBtn" destination="7XR-wj-xUv" id="SCP-9W-M8K"/>
                 <outlet property="rotationView" destination="2a6-Mb-ab4" id="lYV-ed-qLD"/>
                 <outlet property="tipLabel" destination="f73-L9-hiH" id="4hQ-h3-qMa"/>
             </connections>

@@ -13,6 +13,7 @@ class VisitorView: UIView {
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var rotationView: UIImageView!
     @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var loginBtn: UIButton!
     
     
     func setUp(iconName: String, tip: String) {
@@ -37,3 +38,4 @@ class VisitorView: UIView {
     
 
 }
+

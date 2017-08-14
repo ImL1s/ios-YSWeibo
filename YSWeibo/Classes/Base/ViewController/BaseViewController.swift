@@ -15,6 +15,7 @@ class BaseViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        vistorView.loginBtn.addTarget(self, action: #selector(onLoginClick), for: .touchUpInside)
     }
     
     override func loadView() {
@@ -30,5 +31,14 @@ extension BaseViewController{
     
     func loadVistorView() {
         self.view = vistorView
+    }
+}
+
+extension BaseViewController{
+    
+    func onLoginClick() {
+        present(UINavigationController(rootViewController: OAuthViewController()), animated: true) { 
+            
+        }
     }
 }

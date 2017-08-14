@@ -32,6 +32,8 @@
 		0978FD001F189CB400DDF284 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FCFE1F189CB400DDF284 /* Discover.storyboard */; };
 		0978FD031F189CCB00DDF284 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978FD011F189CCB00DDF284 /* Profile.storyboard */; };
 		0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978FD091F1B45EF00DDF284 /* VisitorView.swift */; };
+		09897A151F41F7CC00BF45B9 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09897A131F41F7CC00BF45B9 /* OAuthViewController.swift */; };
+		09897A161F41F7CC00BF45B9 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09897A141F41F7CC00BF45B9 /* OAuthViewController.xib */; };
 		09B60B6E1F30513F00275921 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B6D1F30513F00275921 /* NetworkManager.swift */; };
 		09B60B701F30517B00275921 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B6F1F30517B00275921 /* NetworkManagerProtocol.swift */; };
 		09B60B761F30868D00275921 /* NetworkManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B751F30868D00275921 /* NetworkManagerFactory.swift */; };
@@ -90,6 +92,8 @@
 		0978FCFF1F189CB400DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		0978FD021F189CCB00DDF284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		0978FD091F1B45EF00DDF284 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		09897A131F41F7CC00BF45B9 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		09897A141F41F7CC00BF45B9 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		09B60B6D1F30513F00275921 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		09B60B6F1F30517B00275921 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		09B60B751F30868D00275921 /* NetworkManagerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerFactory.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 		095341D31F16944100297D2C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				09897A121F41F7AA00BF45B9 /* OAuth */,
 				0978FD081F1B45C500DDF284 /* Visitor */,
 				095341D61F16966F00297D2C /* MainViewController.swift */,
 			);
@@ -287,6 +292,15 @@
 				09DF6D0D1F1B466A0042A30E /* VistorView.xib */,
 			);
 			path = Visitor;
+			sourceTree = "<group>";
+		};
+		09897A121F41F7AA00BF45B9 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				09897A131F41F7CC00BF45B9 /* OAuthViewController.swift */,
+				09897A141F41F7CC00BF45B9 /* OAuthViewController.xib */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		09B60B6C1F3050EC00275921 /* Manager */ = {
@@ -461,6 +475,7 @@
 				0978FCFA1F189C7700DDF284 /* Home.storyboard in Resources */,
 				0978FD031F189CCB00DDF284 /* Profile.storyboard in Resources */,
 				095341AA1F16919400297D2C /* Assets.xcassets in Resources */,
+				09897A161F41F7CC00BF45B9 /* OAuthViewController.xib in Resources */,
 				09DF6D0E1F1B466A0042A30E /* VistorView.xib in Resources */,
 				095341E11F17496100297D2C /* MainVCSettings.json in Resources */,
 				0978FCFD1F189C9D00DDF284 /* Message.storyboard in Resources */,
@@ -633,6 +648,7 @@
 				095341D71F16966F00297D2C /* MainViewController.swift in Sources */,
 				095341DD1F169A0E00297D2C /* MessageViewController.swift in Sources */,
 				09B60B761F30868D00275921 /* NetworkManagerFactory.swift in Sources */,
+				09897A151F41F7CC00BF45B9 /* OAuthViewController.swift in Sources */,
 				095341A51F16919400297D2C /* ViewController.swift in Sources */,
 				09B60B6E1F30513F00275921 /* NetworkManager.swift in Sources */,
 				096DE8B51F1C7550002973E4 /* UIButton-Extension.swift in Sources */,
