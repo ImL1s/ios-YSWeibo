@@ -50,17 +50,32 @@ class NetworkManager: NetWorkManagerProtocol{
             af.post(urlString, parameters: parameters, progress: nil, success: successCallback, failure: failureCallback)
         }
     }
+}
+
+extension NetworkManager{
     
     func loadAccessToken(code: String, finished: @escaping Finished) {
         let parameters = ["client_id" : app_key, "client_secret" : app_secret, "grant_type" : "authorization_code", "code" : code, "redirect_uri" : redirect_url]
         request(requestType: .POST, urlString: access_token_uri, parameters: parameters) { (result: Any?, error: Error?) -> () in
-            
             if(error != nil){
-                print(error)
+                print(error!)
+                return
             }
             let jsonObject = result as! [String:Any]
             finished(jsonObject, error)
             
+        }
+    }
+    
+    func loadUserInfo(accessToken: String, uid: String, finished: @escaping Finished) {
+        let parameters = ["access_token" : accessToken, "uid" : uid]
+        request(requestType: .GET, urlString: user_info_uri, parameters: parameters) { (result, error) in
+            if(error != nil){
+                print(error!)
+                return
+            }
+            let jsonObject = result as! [String:Any]
+            finished(jsonObject,error)
         }
     }
 }

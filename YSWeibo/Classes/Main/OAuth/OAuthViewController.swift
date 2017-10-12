@@ -55,6 +55,10 @@ extension OAuthViewController{
             let account = UserAccount(dict: result)
             NSLog(accessToken as! String)
             print(account)
+            
+            NetworkManager.shareInstance.loadUserInfo(accessToken: account.access_token!, uid: account.uid!, finished: { (result, error) in
+                print( "UserInfo: \(result.description)")
+            })
         }
         
         dismiss(animated: true, completion: nil)
@@ -71,7 +75,7 @@ extension OAuthViewController{
     }
     
     func onFillClick(){
-        let jsCode = "document.getElementById('userId').value='aa22396584@gmail.com';document.getElementById('passwd').value='aa8707887078';"
+        let jsCode = "document.getElementById('userId').value='aa22396584';document.getElementById('passwd').value='aa8707887078';"
         webView.stringByEvaluatingJavaScript(from: jsCode)
     }
 }
