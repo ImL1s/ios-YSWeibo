@@ -34,6 +34,8 @@
 		0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978FD091F1B45EF00DDF284 /* VisitorView.swift */; };
 		09897A151F41F7CC00BF45B9 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09897A131F41F7CC00BF45B9 /* OAuthViewController.swift */; };
 		09897A161F41F7CC00BF45B9 /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09897A141F41F7CC00BF45B9 /* OAuthViewController.xib */; };
+		09897A311F48187500BF45B9 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09897A301F48187500BF45B9 /* Common.swift */; };
+		0997531C1F8DDEEE00C4B859 /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0997531B1F8DDEEE00C4B859 /* UserAccount.swift */; };
 		09B60B6E1F30513F00275921 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B6D1F30513F00275921 /* NetworkManager.swift */; };
 		09B60B701F30517B00275921 /* NetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B6F1F30517B00275921 /* NetworkManagerProtocol.swift */; };
 		09B60B761F30868D00275921 /* NetworkManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B751F30868D00275921 /* NetworkManagerFactory.swift */; };
@@ -94,6 +96,8 @@
 		0978FD091F1B45EF00DDF284 /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		09897A131F41F7CC00BF45B9 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		09897A141F41F7CC00BF45B9 /* OAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		09897A301F48187500BF45B9 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		0997531B1F8DDEEE00C4B859 /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		09B60B6D1F30513F00275921 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		09B60B6F1F30517B00275921 /* NetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		09B60B751F30868D00275921 /* NetworkManagerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerFactory.swift; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 			children = (
 				09897A131F41F7CC00BF45B9 /* OAuthViewController.swift */,
 				09897A141F41F7CC00BF45B9 /* OAuthViewController.xib */,
+				09897A301F48187500BF45B9 /* Common.swift */,
+				0997531B1F8DDEEE00C4B859 /* UserAccount.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -523,9 +529,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YSWeibo/Pods-YSWeibo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -538,13 +553,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YSWeiboUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		54E059A10B339FB50364B6C1 /* [CP] Embed Pods Frameworks */ = {
@@ -568,13 +586,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YSWeibo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F1211B5245D2070046A27A6 /* [CP] Copy Pods Resources */ = {
@@ -613,13 +634,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YSWeiboTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2C958F2D3C5FF37CDD4DD00 /* [CP] Copy Pods Resources */ = {
@@ -652,6 +676,7 @@
 				095341A51F16919400297D2C /* ViewController.swift in Sources */,
 				09B60B6E1F30513F00275921 /* NetworkManager.swift in Sources */,
 				096DE8B51F1C7550002973E4 /* UIButton-Extension.swift in Sources */,
+				09897A311F48187500BF45B9 /* Common.swift in Sources */,
 				095341A31F16919400297D2C /* AppDelegate.swift in Sources */,
 				096DE8B71F1C75B1002973E4 /* UIButtonItem-Extension.swift in Sources */,
 				094293911F22076B008F3515 /* UIHomePresentationController.swift in Sources */,
@@ -663,6 +688,7 @@
 				0978FD0A1F1B45EF00DDF284 /* VisitorView.swift in Sources */,
 				095341DB1F1699FE00297D2C /* DiscoverViewController.swift in Sources */,
 				0942938E1F21C087008F3515 /* PopupViewController.swift in Sources */,
+				0997531C1F8DDEEE00C4B859 /* UserAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

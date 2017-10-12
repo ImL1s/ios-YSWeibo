@@ -11,11 +11,29 @@ import AFNetworking
 
 class NetworkManager: NetWorkManagerProtocol{
     
-    public static let shareInstance: NetworkManager = NetworkManager()
+    public static let shareInstance: NetworkManager = {
+        let instance = NetworkManager()
+//        instance.af.responseSerializer = AFJSONRequestSerializer.init(writingOptions: JSONSerialization(.allowFragments))
+//                instance.af.responseSerializer = AFJSONRequestSerializer.init(writingOptions: JSONReadingAllowFragments)
+//        instance.af.requestSerializer = AFHTTPRequestSerializer()
+//        instance.af.requestSerializer = AFHTTPRequestSerializer()
+//        instance.af.requestSerializer = AFJSONRequestSerializer()
+//        instance.af.responseSerializer = AFHTTPResponseSerializer()
+//        instance.af.responseSerializer = AFJSONResponseSerializer()
+        instance.af.responseSerializer.acceptableContentTypes?.insert("text/plain")
+        instance.af.responseSerializer.acceptableContentTypes?.insert("text/html")
+//        instance.af.responseSerializer.acceptableContentTypes?.insert("text/json")
+        instance.af.responseSerializer.acceptableContentTypes?.insert("application/json;charset=UTF-8")
+        instance.af.responseSerializer.acceptableContentTypes?.insert("application/json")
+        return instance
+    }()
+    
     private let af: AFHTTPSessionManager = AFHTTPSessionManager.init()
     
+    typealias Finished = (_ result: [String: Any], _ error: Error?) ->()
     
-    func request(requestType: RequestType, urlString: String, parameters: [String : AnyObject],
+    
+    func request(requestType: RequestType, urlString: String, parameters: [String : Any],
                  finished : @escaping (_ result : Any?, _ error : Error?) -> ()){
         
         let successCallback = {(task: URLSessionDataTask, result: Any?) -> Void in
@@ -30,6 +48,19 @@ class NetworkManager: NetWorkManagerProtocol{
             af.get(urlString, parameters: parameters, progress: nil, success: successCallback, failure: failureCallback)
         }else if(requestType == .POST){
             af.post(urlString, parameters: parameters, progress: nil, success: successCallback, failure: failureCallback)
+        }
+    }
+    
+    func loadAccessToken(code: String, finished: @escaping Finished) {
+        let parameters = ["client_id" : app_key, "client_secret" : app_secret, "grant_type" : "authorization_code", "code" : code, "redirect_uri" : redirect_url]
+        request(requestType: .POST, urlString: access_token_uri, parameters: parameters) { (result: Any?, error: Error?) -> () in
+            
+            if(error != nil){
+                print(error)
+            }
+            let jsonObject = result as! [String:Any]
+            finished(jsonObject, error)
+            
         }
     }
 }

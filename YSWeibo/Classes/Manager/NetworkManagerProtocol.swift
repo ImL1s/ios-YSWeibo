@@ -15,7 +15,7 @@ enum RequestType: String{
 
 protocol NetWorkManagerProtocol{
     
-    func request(requestType: RequestType, urlString: String, parameters: [String : AnyObject],
+    func request(requestType: RequestType, urlString: String, parameters: [String : Any],
                  finished : @escaping (_ result : Any?, _ error : Error?) -> ())
 }
 

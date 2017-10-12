@@ -12,12 +12,10 @@ import SVProgressHUD
 class OAuthViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     
-    let appkey: String = "2473814689"
-    let redirectURl: String = "http://www.google.com.tw"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setUpNavigationBar()
         loadPage()
     }
@@ -30,31 +28,57 @@ class OAuthViewController: UIViewController {
 }
 
 
+// MARK: other
 extension OAuthViewController{
     func setUpNavigationBar() {
         navigationItem.leftBarButtonItem  = UIBarButtonItem(title: "關閉", style: .plain, target: self, action: #selector(onCloseItemClick))
+        navigationItem.rightBarButtonItem  = UIBarButtonItem(title: "填充", style: .plain, target: self, action: #selector(onFillClick))
     }
     
     func loadPage() {
-        guard let url = URL(string: "https://api.weibo.com/oauth2/authorize?client_id=\(appkey)&redirect_uri=\(redirectURl)") else {
+        guard let url = URL(string: "\(authorize_uri)client_id=\(app_key)&redirect_uri=\(redirect_url)") else {
             return
         }
         webView.loadRequest(URLRequest(url: url))
         webView.delegate = self
         
     }
+    
+    func loadAccessToken(accessCode: String) {
+        NSLog("code: %@", accessCode)
+        NetworkManager.shareInstance.loadAccessToken(code: accessCode) { (result, error) in
+            if(error != nil){
+                print(error!)
+                return
+            }
+            let accessToken = result["access_token"]
+            print(result)
+            let account = UserAccount(dict: result)
+            NSLog(accessToken as! String)
+            print(account)
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 
+// MARK: event
 extension OAuthViewController{
     func onCloseItemClick() {
         dismiss(animated: true) {
             
         }
     }
+    
+    func onFillClick(){
+        let jsCode = "document.getElementById('userId').value='aa22396584@gmail.com';document.getElementById('passwd').value='aa8707887078';"
+        webView.stringByEvaluatingJavaScript(from: jsCode)
+    }
 }
 
 
+// MARK: UIWebViewDelegate
 extension OAuthViewController: UIWebViewDelegate{
     
     public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
@@ -68,12 +92,8 @@ extension OAuthViewController: UIWebViewDelegate{
         guard urlString.contains("code=") else {
             return true
         }
-        
         let code = urlString.components(separatedBy: "code=").last
-        
-        NSLog("code: %@", code!)
-        
-        dismiss(animated: true, completion: nil)
+        loadAccessToken(accessCode: code!)
         return false
     }
     
