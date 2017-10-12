@@ -12,9 +12,15 @@ class UserAccount: NSObject {
     
     var access_token: String?
     
-    var expires_in: Int = 0
+    var expires_in: TimeInterval = 0.0{
+        didSet{
+            expires_data = Date(timeIntervalSinceNow: expires_in)
+        }
+    }
     
     var remind_in: Int = 0
+    
+    var expires_data : Date?
     
     var uid: String?
     
@@ -30,6 +36,8 @@ class UserAccount: NSObject {
     }
     
     override var description: String{
-        return dictionaryWithValues(forKeys: ["access_token","expires_in","uid","remind_in","isRealName"]).description
+        let propStr = dictionaryWithValues(forKeys: ["access_token","expires_in","uid","remind_in","isRealName","expires_data"]).description
+        
+        return "UserAccount: \(propStr)"
     }
 }
