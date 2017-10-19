@@ -18,6 +18,7 @@ class OAuthViewController: UIViewController {
         super.viewDidLoad()
         setUpNavigationBar()
         loadPage()
+        print("Home: \(NSHomeDirectory())")
     }
     
     override func didReceiveMemoryWarning() {
@@ -56,8 +57,15 @@ extension OAuthViewController{
             NSLog(accessToken as! String)
             print(account)
             
-            NetworkManager.shareInstance.loadUserInfo(accessToken: account.access_token!, uid: account.uid!, finished: { (result, error) in
-                print( "UserInfo: \(result.description)")
+            NetworkManager.shareInstance.loadUserInfo(accessToken: account.access_token!, uid: account.uid!, finished: { (userInfoDic, error) in
+                
+                let userAccount = UserAccount(dict: result)
+                print( "UserInfo: \(userAccount.description)")
+                var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+                accountPath.append("/account.plist")
+                NSKeyedArchiver.archiveRootObject(userAccount, toFile: accountPath)
+                
+                
             })
         }
         

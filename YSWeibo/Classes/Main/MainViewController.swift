@@ -18,24 +18,6 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         initTabBar()
         
-        let af = AFHTTPSessionManager.init()
-        
-//        af.post("https://httpbin.org/post", parameters: nil, progress: nil, success: { (task, result) in
-//            print(result)
-//            let jsonDic = result as! [String:Any]
-//            print(jsonDic["headers"])
-//        }) { (task, error) in
-//            print(error)
-//        }
-        
-        
-        
-//        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//        [manager GET:@"http://example.com/resources.json" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-//            NSLog(@"JSON: %@", responseObject);
-//            } failure:^(NSURLSessionTask *operation, NSError *error) {
-//            NSLog(@"Error: %@", error);
-//            }];
         
     }
     

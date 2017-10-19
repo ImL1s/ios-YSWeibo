@@ -19,6 +19,26 @@ class BaseViewController: UITableViewController {
     }
     
     override func loadView() {
+        var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+        accountPath.append("/account.plist")
+        let account = NSKeyedUnarchiver.unarchiveObject(withFile: accountPath) as? UserAccount
+        
+        if account == nil{
+            print("account unarchive failed or account not exist")
+        }else{
+            if let accessToken = account!.access_token{
+                if let expiresDate = account?.expires_data{
+                    isLogin = (expiresDate.compare(Date()) == ComparisonResult.orderedDescending)
+                }
+                isLogin = true
+                
+            }else{
+                print("account token not exist")
+            }
+        }
+        
+        
+        
         isLogin ? super.loadView() : loadVistorView()
     }
     
