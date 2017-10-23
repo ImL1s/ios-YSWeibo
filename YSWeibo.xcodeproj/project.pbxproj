@@ -41,6 +41,7 @@
 		09B60B761F30868D00275921 /* NetworkManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B60B751F30868D00275921 /* NetworkManagerFactory.swift */; };
 		09DF6D0E1F1B466A0042A30E /* VistorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09DF6D0D1F1B466A0042A30E /* VistorView.xib */; };
 		09DF6D121F1B48890042A30E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DF6D111F1B48890042A30E /* BaseViewController.swift */; };
+		22568E011F9DAF7C006F32B6 /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22568E001F9DAF7C006F32B6 /* UserAccountViewModel.swift */; };
 		2360DB693F0705D0A94EA7EE /* Pods_YSWeiboTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32D8BDA243A413D12404D8A /* Pods_YSWeiboTests.framework */; };
 		94CF8C541F29AB7800262B1C /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF8C531F29AB7800262B1C /* PopoverAnimator.swift */; };
 		A41A5CAAF2C6C768FCACB690 /* Pods_YSWeibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449A84488EFBD9C49E102275 /* Pods_YSWeibo.framework */; };
@@ -104,6 +105,7 @@
 		09DF6D0D1F1B466A0042A30E /* VistorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VistorView.xib; sourceTree = "<group>"; };
 		09DF6D111F1B48890042A30E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1ED8B841D1596E9E5814A229 /* Pods-YSWeiboUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSWeiboUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YSWeiboUITests/Pods-YSWeiboUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		22568E001F9DAF7C006F32B6 /* UserAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		2C672C82BE658EDD9EA21E81 /* Pods_YSWeiboUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSWeiboUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		449A84488EFBD9C49E102275 /* Pods_YSWeibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YSWeibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F541793794589C3F08E028 /* Pods-YSWeiboTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YSWeiboTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YSWeiboTests/Pods-YSWeiboTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				09897A141F41F7CC00BF45B9 /* OAuthViewController.xib */,
 				09897A301F48187500BF45B9 /* Common.swift */,
 				0997531B1F8DDEEE00C4B859 /* UserAccount.swift */,
+				22568E001F9DAF7C006F32B6 /* UserAccountViewModel.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				09B60B6E1F30513F00275921 /* NetworkManager.swift in Sources */,
 				096DE8B51F1C7550002973E4 /* UIButton-Extension.swift in Sources */,
 				09897A311F48187500BF45B9 /* Common.swift in Sources */,
+				22568E011F9DAF7C006F32B6 /* UserAccountViewModel.swift in Sources */,
 				095341A31F16919400297D2C /* AppDelegate.swift in Sources */,
 				096DE8B71F1C75B1002973E4 /* UIButtonItem-Extension.swift in Sources */,
 				094293911F22076B008F3515 /* UIHomePresentationController.swift in Sources */,

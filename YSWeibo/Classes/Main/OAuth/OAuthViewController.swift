@@ -58,14 +58,11 @@ extension OAuthViewController{
             print(account)
             
             NetworkManager.shareInstance.loadUserInfo(accessToken: account.access_token!, uid: account.uid!, finished: { (userInfoDic, error) in
-                
                 let userAccount = UserAccount(dict: result)
                 print( "UserInfo: \(userAccount.description)")
                 var accountPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
                 accountPath.append("/account.plist")
                 NSKeyedArchiver.archiveRootObject(userAccount, toFile: accountPath)
-                
-                
             })
         }
         

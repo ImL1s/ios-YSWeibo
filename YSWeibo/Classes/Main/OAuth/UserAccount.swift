@@ -36,13 +36,12 @@ class UserAccount: NSObject,NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder){
+        super.init()
         access_token = aDecoder.decodeObject(forKey: "access_token") as? String
         uid = aDecoder.decodeObject(forKey: "uid") as? String
-        //        expires_data = aDecoder.decodeObject(forKey: "expires_data")
-        if let expires_in = aDecoder.decodeObject(forKey: "expires_in") as? TimeInterval{
-            self.expires_in = expires_in
-        }
-//        remind_in = aDecoder.decodeObject(forKey: "remind_in") as? Int
+        self.expires_in = aDecoder.decodeDouble(forKey: "expires_in") as TimeInterval
+        self.remind_in = aDecoder.decodeInteger(forKey: "remind_in") as Int
+        expires_data = Date(timeIntervalSinceNow: expires_in)
         isRealName = aDecoder.decodeObject(forKey: "isRealName") as? String
     }
     
